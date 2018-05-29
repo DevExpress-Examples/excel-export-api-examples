@@ -14,20 +14,4 @@
 * Specify print options
 * Insert pictures
 * Insert hyperlinks
-* Specify document properties<br><br><strong>Starting from v2015 vol.2:</strong>
-* Insert and modify sparklines
-* Apply different fonts to specific text regions within a cell
-* Create image hyperlinks
-* Display a worksheet from right to left<br><br><strong>Starting from v2016 vol.1:</strong><br>
-* Create a table
-* Apply a table style to a table
-* Format the table elements
-* Total data in a table
-* Create calculated columns<br><br><strong>Starting from v2017 vol.1:</strong>
-* Password protect a document 
-* Filter the data by a list of values
-* Apply a number filter
-* Apply a date filter
-* Apply a dynamic filter
-* Apply a Top 10 filter
-* Filter by a fill color
+* Specify document properties
