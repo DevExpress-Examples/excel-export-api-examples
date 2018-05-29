@@ -590,7 +590,12 @@ Namespace XLExportExamples
 
                         ' Specify formatting settings for the total row of the table.
                         table.TotalRowFormatting = XlFill.SolidFill(XlColor.FromTheme(XlThemeColor.Dark1, 0.9))
-                        table.TotalRowFormatting.Border = New XlBorder() With {.BottomColor = XlColor.FromTheme(XlThemeColor.Accent6, 0.0), .BottomLineStyle = XlBorderLineStyle.Thick, .TopColor = XlColor.FromArgb(0, 0, 0), .TopLineStyle = XlBorderLineStyle.Dashed}
+                        table.TotalRowFormatting.Border = New XlBorder() With { _
+                            .BottomColor = XlColor.FromTheme(XlThemeColor.Accent6, 0.0), _
+                            .BottomLineStyle = XlBorderLineStyle.Thick, _
+                            .TopColor = XlColor.FromArgb(0, 0, 0), _
+                            .TopLineStyle = XlBorderLineStyle.Dashed _
+                        }
 
                         ' Specify the total row label.
                         table.Columns(0).TotalRowLabel = "Total"

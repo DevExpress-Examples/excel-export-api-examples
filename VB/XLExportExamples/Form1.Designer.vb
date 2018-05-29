@@ -31,8 +31,8 @@ Namespace XLExportExamples
             Me.btnExportToCSV = New DevExpress.XtraEditors.SimpleButton()
             Me.btnExportToXLS = New DevExpress.XtraEditors.SimpleButton()
             Me.btnExportToXLSX = New DevExpress.XtraEditors.SimpleButton()
-            DirectCast(Me.treeList1, System.ComponentModel.ISupportInitialize).BeginInit()
-            DirectCast(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.treeList1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).BeginInit()
             Me.splitContainerControl1.SuspendLayout()
             Me.SuspendLayout()
             ' 
@@ -81,7 +81,7 @@ Namespace XLExportExamples
             ' 
             ' btnExportToCSV
             ' 
-            Me.btnExportToCSV.Image = (DirectCast(resources.GetObject("btnExportToCSV.Image"), System.Drawing.Image))
+            Me.btnExportToCSV.Image = (CType(resources.GetObject("btnExportToCSV.Image"), System.Drawing.Image))
             Me.btnExportToCSV.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter
             Me.btnExportToCSV.Location = New System.Drawing.Point(299, 10)
             Me.btnExportToCSV.Name = "btnExportToCSV"
@@ -91,7 +91,7 @@ Namespace XLExportExamples
             ' 
             ' btnExportToXLS
             ' 
-            Me.btnExportToXLS.Image = (DirectCast(resources.GetObject("btnExportToXLS.Image"), System.Drawing.Image))
+            Me.btnExportToXLS.Image = (CType(resources.GetObject("btnExportToXLS.Image"), System.Drawing.Image))
             Me.btnExportToXLS.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter
             Me.btnExportToXLS.Location = New System.Drawing.Point(203, 10)
             Me.btnExportToXLS.Name = "btnExportToXLS"
@@ -101,7 +101,7 @@ Namespace XLExportExamples
             ' 
             ' btnExportToXLSX
             ' 
-            Me.btnExportToXLSX.Image = (DirectCast(resources.GetObject("btnExportToXLSX.Image"), System.Drawing.Image))
+            Me.btnExportToXLSX.Image = (CType(resources.GetObject("btnExportToXLSX.Image"), System.Drawing.Image))
             Me.btnExportToXLSX.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter
             Me.btnExportToXLSX.Location = New System.Drawing.Point(107, 10)
             Me.btnExportToXLSX.Name = "btnExportToXLSX"
@@ -117,8 +117,8 @@ Namespace XLExportExamples
             Me.Controls.Add(Me.splitContainerControl1)
             Me.Name = "Form1"
             Me.Text = "XL Export Library Examples"
-            DirectCast(Me.treeList1, System.ComponentModel.ISupportInitialize).EndInit()
-            DirectCast(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.treeList1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType(Me.splitContainerControl1, System.ComponentModel.ISupportInitialize).EndInit()
             Me.splitContainerControl1.ResumeLayout(False)
             Me.ResumeLayout(False)
 
