@@ -23,11 +23,4 @@
 * Apply a table style to a table
 * Format the table elements
 * Total data in a table
-* Create calculated columns<br><br><strong>Starting from v2017 vol.1:</strong>
-* Password protect a document 
-* Filter the data by a list of values
-* Apply a number filter
-* Apply a date filter
-* Apply a dynamic filter
-* Apply a Top 10 filter
-* Filter by a fill color
+* Create calculated columns
