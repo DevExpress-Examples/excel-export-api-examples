@@ -1,3 +1,16 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [CellFormattingActions.cs](./CS/XLExportExamples/SpreadsheetActions/CellFormattingActions.cs) (VB: [CellFormattingActions.vb](./VB/XLExportExamples/SpreadsheetActions/CellFormattingActions.vb))
+* [ConditionalFormattingActions.cs](./CS/XLExportExamples/SpreadsheetActions/ConditionalFormattingActions.cs) (VB: [ConditionalFormattingActions.vb](./VB/XLExportExamples/SpreadsheetActions/ConditionalFormattingActions.vb))
+* [DataActions.cs](./CS/XLExportExamples/SpreadsheetActions/DataActions.cs) (VB: [DataActions.vb](./VB/XLExportExamples/SpreadsheetActions/DataActions.vb))
+* [FormulaActions.cs](./CS/XLExportExamples/SpreadsheetActions/FormulaActions.cs) (VB: [FormulaActions.vb](./VB/XLExportExamples/SpreadsheetActions/FormulaActions.vb))
+* [GeneralActions.cs](./CS/XLExportExamples/SpreadsheetActions/GeneralActions.cs) (VB: [GeneralActions.vb](./VB/XLExportExamples/SpreadsheetActions/GeneralActions.vb))
+* [MiscellaneousActions.cs](./CS/XLExportExamples/SpreadsheetActions/MiscellaneousActions.cs) (VB: [MiscellaneousActions.vb](./VB/XLExportExamples/SpreadsheetActions/MiscellaneousActions.vb))
+* [PageViewAndLayoutActions.cs](./CS/XLExportExamples/SpreadsheetActions/PageViewAndLayoutActions.cs) (VB: [PageViewAndLayoutActions.vb](./VB/XLExportExamples/SpreadsheetActions/PageViewAndLayoutActions.vb))
+* [PictureActions.cs](./CS/XLExportExamples/SpreadsheetActions/PictureActions.cs) (VB: [PictureActions.vb](./VB/XLExportExamples/SpreadsheetActions/PictureActions.vb))
+* [SparklineActions.cs](./CS/XLExportExamples/SpreadsheetActions/SparklineActions.cs) (VB: [SparklineActions.vb](./VB/XLExportExamples/SpreadsheetActions/SparklineActions.vb))
+<!-- default file list end -->
 # Excel Export API - Examples
 
 
