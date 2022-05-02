@@ -27,7 +27,7 @@ Namespace XLExportExamples
             Using document As IXlDocument = exporter.CreateDocument(stream)
                 document.Options.Culture = CultureInfo.CurrentCulture
 
-'                #Region "#Hyperlinks"
+                #Region "Hyperlinks"
                 ' Create a worksheet.
                 Using sheet As IXlSheet = document.CreateSheet()
                     Using column As IXlColumn = sheet.CreateColumn()
@@ -70,7 +70,7 @@ Namespace XLExportExamples
                         End Using
                     End Using
                 End Using
-'                #End Region ' #Hyperlinks
+                #End Region 
             End Using
         End Sub
 
@@ -78,7 +78,7 @@ Namespace XLExportExamples
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
 
-'            #Region "#DocumentProperties"
+            #Region "DocumentProperties"
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
                 document.Options.Culture = CultureInfo.CurrentCulture
@@ -108,13 +108,13 @@ Namespace XLExportExamples
                     End Using
                 End Using
             End Using
-'            #End Region ' #DocumentProperties
+            #End Region 
         End Sub
 
         Private Shared Sub DocumentOptions(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-'            #Region "#DocumentOptions"
+            #Region "DocumentOptions"
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
                 document.Options.Culture = CultureInfo.CurrentCulture
@@ -184,11 +184,11 @@ Namespace XLExportExamples
                     End Using
                 End Using
             End Using
-'            #End Region ' #DocumentOptions
+            #End Region
         End Sub
 
         Private Shared Sub CsvExportOptions(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
-'            #Region "#CsvOptions"
+            #Region "CsvOptions"
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
 
@@ -237,7 +237,7 @@ Namespace XLExportExamples
                     Next i
                 End Using
             End Using
-'            #End Region ' #CsvOptions
+            #End Region
         End Sub
     End Class
 End Namespace
