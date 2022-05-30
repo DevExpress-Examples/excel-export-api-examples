@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Globalization;
 using System.IO;
 using DevExpress.Export.Xl;
@@ -35,7 +36,7 @@ namespace XLExportExamples
                     // Insert a picture from a file and anchor it to cells. 
                     using (IXlPicture picture = sheet.CreatePicture())
                     {
-                        picture.Image = Image.FromFile(Path.Combine(imagesPath, "image1.jpg"));
+                        picture.SetImage(Image.FromFile(Path.Combine(imagesPath, "image1.jpg")), ImageFormat.Jpeg);
                         picture.SetTwoCellAnchor(new XlAnchorPoint(1, 1, 0, 0), new XlAnchorPoint(6, 11, 2, 15), XlAnchorType.TwoCell);
                     }
                 }
@@ -73,7 +74,7 @@ namespace XLExportExamples
                     // Insert a picture from a file and stretch it to fill the cell B2.
                     using (IXlPicture picture = sheet.CreatePicture())
                     {
-                        picture.Image = Image.FromFile(Path.Combine(imagesPath, "image1.jpg"));
+                        picture.SetImage(Image.FromFile(Path.Combine(imagesPath, "image1.jpg")), ImageFormat.Jpeg);
                         picture.StretchToCell(new XlCellPosition(1, 1));
                     }
                 }
@@ -111,7 +112,7 @@ namespace XLExportExamples
                     // Insert a picture from a file to fit in the cell B2.
                     using (IXlPicture picture = sheet.CreatePicture())
                     {
-                        picture.Image = Image.FromFile(Path.Combine(imagesPath, "image1.jpg"));
+                        picture.SetImage(Image.FromFile(Path.Combine(imagesPath, "image1.jpg")), ImageFormat.Jpeg);
                         picture.FitToCell(new XlCellPosition(1, 1), 300, 154, true);
                     }
                 }
@@ -137,7 +138,7 @@ namespace XLExportExamples
                     // Load a picture from a file and add a hyperlink to it.
                     using (IXlPicture picture = sheet.CreatePicture())
                     {
-                        picture.Image = Image.FromFile(Path.Combine(imagesPath, "DevExpress.png"));
+                        picture.SetImage(Image.FromFile(Path.Combine(imagesPath, "DevExpress.png")), ImageFormat.Png);
                         picture.HyperlinkClick.TargetUri = "http://www.devexpress.com";
                         picture.HyperlinkClick.Tooltip = "Developer Express Inc.";
                         picture.SetTwoCellAnchor(new XlAnchorPoint(1, 1, 0, 0), new XlAnchorPoint(10, 5, 2, 15), XlAnchorType.TwoCell);
