@@ -735,6 +735,14 @@ namespace XLExportExamples {
                             cell.Formatting = new XlCellFormatting();
                             cell.Formatting.NumberFormat = "# ???/???";
                         }
+                        using (IXlCell cell = row.CreateCell())
+                        {
+                            // Display text value
+                            cell.Value = "test";
+                            cell.Formatting = new XlCellFormatting();
+                            cell.Formatting.NumberFormat = XlNumberFormat.Text;
+                        }
+
                     }
                     #endregion #ExcelNumberFormat
 
