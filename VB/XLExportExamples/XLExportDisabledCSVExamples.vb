@@ -1,15 +1,14 @@
-﻿Imports System.Collections.Generic
+Imports System.Collections.Generic
 
 Namespace XLExportExamples
-    #Region "XLExportDisabledCSVExamples"
-    Public NotInheritable Class XLExportDisabledCSVExamples
 
-        Private Sub New()
-        End Sub
+'#Region "XLExportDisabledCSVExamples"
+    Public Module XLExportDisabledCSVExamples
 
-        Public Shared Examples As HashSet(Of String) = CreateNonCSVExamples()
-        Private Shared Function CreateNonCSVExamples() As HashSet(Of String)
-            Dim result As New HashSet(Of String)()
+        Public Examples As HashSet(Of String) = CreateNonCSVExamples()
+
+        Private Function CreateNonCSVExamples() As HashSet(Of String)
+            Dim result As HashSet(Of String) = New HashSet(Of String)()
             result.Add("Hide Worksheet")
             result.Add("Hide Gridlines")
             result.Add("Hide Row and Column Headers")
@@ -72,17 +71,16 @@ Namespace XLExportExamples
             result.Add("Calculated Column")
             Return result
         End Function
-    End Class
-    #End Region
-    #Region "XLExportForbiddenXLSModules"
-    Public NotInheritable Class XLExportForbiddenXLSExamples
+    End Module
 
-        Private Sub New()
-        End Sub
+'#End Region
+'#Region "XLExportForbiddenXLSModules"
+    Public Module XLExportForbiddenXLSExamples
 
-        Public Shared Examples As HashSet(Of String) = CreateNonXLSExamples()
-        Private Shared Function CreateNonXLSExamples() As HashSet(Of String)
-            Dim result As New HashSet(Of String)()
+        Public Examples As HashSet(Of String) = CreateNonXLSExamples()
+
+        Private Function CreateNonXLSExamples() As HashSet(Of String)
+            Dim result As HashSet(Of String) = New HashSet(Of String)()
             result.Add("Add Sparkline Group")
             result.Add("Add Sparkline to Group")
             result.Add("Adjust Scaling")
@@ -91,6 +89,6 @@ Namespace XLExportExamples
             result.Add("Set Date Range")
             Return result
         End Function
-    End Class
-    #End Region
+    End Module
+'#End Region
 End Namespace

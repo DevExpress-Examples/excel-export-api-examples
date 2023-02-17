@@ -1,69 +1,68 @@
-﻿Imports System
+Imports System
 Imports System.Globalization
 Imports System.IO
 Imports DevExpress.Export.Xl
 
 Namespace XLExportExamples
-    Public NotInheritable Class GeneralActions
 
-        Private Sub New()
-        End Sub
+    Public Module GeneralActions
 
+'#Region "Actions"
+        Public CreateDocumentAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateDocument
 
-        #Region "Actions"
-        Public Shared CreateDocumentAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateDocument
-        Public Shared CreateSheetAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateSheet
-        Public Shared CreateHiddenSheetAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateHiddenSheet
-        Public Shared HideGridlinesAction As Action(Of Stream, XlDocumentFormat) = AddressOf HideGridlines
-        Public Shared HideHeadersAction As Action(Of Stream, XlDocumentFormat) = AddressOf HideHeaders
-        Public Shared CreateColumnsAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateColumns
-        Public Shared CreateRowsAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateRows
-        Public Shared CreateCellsAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateCells
-        Public Shared MergeCellsAction As Action(Of Stream, XlDocumentFormat) = AddressOf MergeCells
-        #End Region
+        Public CreateSheetAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateSheet
 
-        Private Shared Sub CreateDocument(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
-'            #Region "#CreateDocument"
+        Public CreateHiddenSheetAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateHiddenSheet
+
+        Public HideGridlinesAction As Action(Of Stream, XlDocumentFormat) = AddressOf HideGridlines
+
+        Public HideHeadersAction As Action(Of Stream, XlDocumentFormat) = AddressOf HideHeaders
+
+        Public CreateColumnsAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateColumns
+
+        Public CreateRowsAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateRows
+
+        Public CreateCellsAction As Action(Of Stream, XlDocumentFormat) = AddressOf CreateCells
+
+        Public MergeCellsAction As Action(Of Stream, XlDocumentFormat) = AddressOf MergeCells
+
+'#End Region
+        Private Sub CreateDocument(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
+'#Region "#CreateDocument"
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-
             ' Create a new document and write it to the specified stream.
             Using document As IXlDocument = exporter.CreateDocument(stream)
                 ' Specify the document culture. 
                 document.Options.Culture = CultureInfo.CurrentCulture
             End Using
-'            #End Region ' #CreateDocument
+'#End Region  ' #CreateDocument
         End Sub
 
-        Private Shared Sub CreateSheet(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
+        Private Sub CreateSheet(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-'            #Region "#CreateSheet"
+'#Region "#CreateSheet"
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
-
                 ' Specify the document culture.
                 document.Options.Culture = CultureInfo.CurrentCulture
-
                 ' Create a new worksheet under the specified name. 
                 Using sheet As IXlSheet = document.CreateSheet()
                     sheet.Name = "Sales report"
                 End Using
             End Using
-'            #End Region ' #CreateSheet
+'#End Region  ' #CreateSheet
         End Sub
 
-        Private Shared Sub CreateHiddenSheet(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
+        Private Sub CreateHiddenSheet(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
-
                 ' Specify the document culture.
                 document.Options.Culture = CultureInfo.CurrentCulture
-
-'                #Region "#CreateHiddenSheet"
+'#Region "#CreateHiddenSheet"
                 ' Create the first worksheet. 
                 Using sheet As IXlSheet = document.CreateSheet()
                     sheet.Name = "Sales report"
@@ -74,63 +73,54 @@ Namespace XLExportExamples
                     sheet.Name = "Sales data"
                     sheet.VisibleState = XlSheetVisibleState.Hidden
                 End Using
-'                #End Region ' #CreateHiddenSheet
+'#End Region  ' #CreateHiddenSheet
             End Using
         End Sub
 
-        Private Shared Sub HideHeaders(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
+        Private Sub HideHeaders(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
-
                 ' Specify the document culture.
                 document.Options.Culture = CultureInfo.CurrentCulture
-
-'                #Region "#HideHeaders"
+'#Region "#HideHeaders"
                 ' Create a worksheet. 
                 Using sheet As IXlSheet = document.CreateSheet()
                     ' Hide row and column headers in the worksheet.
                     sheet.ViewOptions.ShowRowColumnHeaders = False
                 End Using
-'                #End Region ' #HideHeaders
+'#End Region  ' #HideHeaders
             End Using
         End Sub
 
-        Private Shared Sub HideGridlines(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
+        Private Sub HideGridlines(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
-
                 ' Specify the document culture.
                 document.Options.Culture = CultureInfo.CurrentCulture
-
-'                #Region "#HideGridlines"
+'#Region "#HideGridlines"
                 ' Create a worksheet. 
                 Using sheet As IXlSheet = document.CreateSheet()
                     ' Hide gridlines on the worksheet.
                     sheet.ViewOptions.ShowGridLines = False
                 End Using
-'                #End Region ' #HideGridlines
+'#End Region  ' #HideGridlines
             End Using
         End Sub
 
-        Private Shared Sub CreateColumns(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
+        Private Sub CreateColumns(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
-
                 ' Specify the document culture.
                 document.Options.Culture = CultureInfo.CurrentCulture
-'                #Region "#CreateColumns"
+'#Region "#CreateColumns"
                 ' Create a worksheet.
                 Using sheet As IXlSheet = document.CreateSheet()
-
                     ' Create the column A and set its width to 100 pixels.
                     Using column As IXlColumn = sheet.CreateColumn()
                         column.WidthInPixels = 100
@@ -146,23 +136,20 @@ Namespace XLExportExamples
                         column.WidthInCharacters = 24.5F
                     End Using
                 End Using
-'                #End Region ' #CreateColumns
+'#End Region  ' #CreateColumns
             End Using
         End Sub
 
-        Private Shared Sub CreateRows(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
+        Private Sub CreateRows(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
-
                 ' Specify the document culture.
                 document.Options.Culture = CultureInfo.CurrentCulture
-'                #Region "#CreateRows"
+'#Region "#CreateRows"
                 ' Create a worksheet.
                 Using sheet As IXlSheet = document.CreateSheet()
-
                     ' Create the first row and set its height to 40 pixels.
                     Using row As IXlRow = sheet.CreateRow()
                         row.HeightInPixels = 40
@@ -173,20 +160,18 @@ Namespace XLExportExamples
                         row.IsHidden = True
                     End Using
                 End Using
-'                #End Region ' #CreateRows
+'#End Region  ' #CreateRows
             End Using
         End Sub
 
-        Private Shared Sub CreateCells(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
+        Private Sub CreateCells(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
-
                 ' Specify the document culture.
                 document.Options.Culture = CultureInfo.CurrentCulture
-'                #Region "#CreateCells"
+'#Region "#CreateCells"
                 ' Create a worksheet.
                 Using sheet As IXlSheet = document.CreateSheet()
                     ' Create the column A and set its width. 
@@ -196,7 +181,6 @@ Namespace XLExportExamples
 
                     ' Create the first row.
                     Using row As IXlRow = sheet.CreateRow()
-
                         ' Create the cell A1 and set its value.
                         Using cell As IXlCell = row.CreateCell()
                             cell.Value = "Numeric value:"
@@ -210,7 +194,6 @@ Namespace XLExportExamples
 
                     ' Create the second row.
                     Using row As IXlRow = sheet.CreateRow()
-
                         ' Create the cell A2 and set its value.
                         Using cell As IXlCell = row.CreateCell()
                             cell.Value = "Text value:"
@@ -224,7 +207,6 @@ Namespace XLExportExamples
 
                     ' Create the third row.
                     Using row As IXlRow = sheet.CreateRow()
-
                         ' Create the cell A3 and set its value.
                         Using cell As IXlCell = row.CreateCell()
                             cell.Value = "Boolean value:"
@@ -238,7 +220,6 @@ Namespace XLExportExamples
 
                     ' Create the fourth row.
                     Using row As IXlRow = sheet.CreateRow()
-
                         ' Create the cell A4 and set its value.
                         Using cell As IXlCell = row.CreateCell()
                             cell.Value = "Error value:"
@@ -250,18 +231,16 @@ Namespace XLExportExamples
                         End Using
                     End Using
                 End Using
-'                #End Region ' #CreateCells
+'#End Region  ' #CreateCells
             End Using
         End Sub
 
-        Private Shared Sub MergeCells(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
+        Private Sub MergeCells(ByVal stream As Stream, ByVal documentFormat As XlDocumentFormat)
             ' Create an exporter instance.
             Dim exporter As IXlExporter = XlExport.CreateExporter(documentFormat)
-
             ' Create a new document.
             Using document As IXlDocument = exporter.CreateDocument(stream)
                 document.Options.Culture = CultureInfo.CurrentCulture
-
                 ' Create a worksheet.
                 Using sheet As IXlSheet = document.CreateSheet()
                     ' Create the first row in the worksheet.
@@ -286,6 +265,7 @@ Namespace XLExportExamples
                             ' Wrap the text within the cell.
                             cell.Formatting.Alignment.WrapText = True
                         End Using
+
                         ' Create a cell.
                         Using cell As IXlCell = row.CreateCell()
                             ' Set the cell value.
@@ -295,19 +275,16 @@ Namespace XLExportExamples
                         End Using
                     End Using
 
-'                    #Region "#MergeCells"
+'#Region "#MergeCells"
                     ' Merge cells contained in the range A1:E1.
                     sheet.MergedCells.Add(XlCellRange.FromLTRB(0, 0, 4, 0))
-
                     ' Merge cells contained in the range A2:A5.
                     sheet.MergedCells.Add(XlCellRange.FromLTRB(0, 1, 0, 4))
-
                     ' Merge cells contained in the range B2:E5.
                     sheet.MergedCells.Add(XlCellRange.FromLTRB(1, 1, 4, 4))
-'                    #End Region ' #MergeCells
+'#End Region  ' #MergeCells
                 End Using
             End Using
         End Sub
-
-    End Class
+    End Module
 End Namespace
