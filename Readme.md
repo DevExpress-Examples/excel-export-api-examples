@@ -32,7 +32,7 @@
 * Specify print options
 * Insert pictures
 * Insert hyperlinks
-* Specify document properties<br><br><strong>Starting from v2015 vol.2:</strong>
+* Specify document properties
 * Insert and modify sparklines
 * Apply different fonts to specific text regions within a cell
 * Create image hyperlinks
