@@ -55,6 +55,6 @@ This project introduces API properties and methods used to perform the followin
 
 * [Get Started with the Excel Export Library - Generate an Excel File](https://docs.devexpress.com/OfficeFileAPI/114032/excel-export-library/getting-started)
 * [Excel Export Library Overview](https://docs.devexpress.com/OfficeFileAPI/114221/excel-export-library/overview)
-* [How to: Create a New Document](https://https://docs.devexpress.com/OfficeFileAPI/114072/excel-export-library/workbooks/how-to-create-a-new-document)
+* [How to: Create a New Document](https://docs.devexpress.com/OfficeFileAPI/114072/excel-export-library/workbooks/how-to-create-a-new-document)
 * [How to: Create a New Worksheet](https://docs.devexpress.com/OfficeFileAPI/114074/excel-export-library/worksheets/how-to-create-a-new-worksheet)
 * [Rows and Columns](https://docs.devexpress.com/OfficeFileAPI/114077/excel-export-library/rows-and-columns)
