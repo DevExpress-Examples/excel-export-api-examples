@@ -529,7 +529,7 @@ Namespace XLExportExamples
                     ' Specify page settings for the worksheet.
                     sheet.PageSetup = New XlPageSetup()
                     ' Select the paper size.
-                    sheet.PageSetup.PaperKind = System.Drawing.Printing.PaperKind.A4
+                    sheet.PageSetup.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4
                     ' Set the page orientation to Landscape.
                     sheet.PageSetup.PageOrientation = XlPageOrientation.Landscape
                     '  Scale the print area to fit to one page wide.
