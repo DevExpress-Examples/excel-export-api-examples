@@ -9,6 +9,9 @@
 
 This example demonstrates how to use the [Excel Export Library](https://docs.devexpress.com/OfficeFileAPI/114031/Excel-Export-Library) to create spreadsheet files in XLSX, XLS and CSV formats.
 
+> [!Important]  
+> The Universal Subscription or an additional Office File API Subscription is required to use this example in production code. For pricing information, please refer to the [DevExpress Subscription](https://www.devexpress.com/Subscriptions/) page. 
+
 This project introduces API properties and methods used to perform the following operations:
 
 * Create a workbook, worksheets,rows, columns and particular cells
