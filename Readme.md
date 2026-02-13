@@ -60,7 +60,7 @@ This project introduces API properties and methods used to perform the followin
 * [How to: Create a New Worksheet](https://docs.devexpress.com/OfficeFileAPI/114074/excel-export-library/worksheets/how-to-create-a-new-worksheet)
 * [Rows and Columns](https://docs.devexpress.com/OfficeFileAPI/114077/excel-export-library/rows-and-columns)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=excel-export-api-examples&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=excel-export-api-examples&~~~was_helpful=no)
 
